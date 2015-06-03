@@ -2553,7 +2553,7 @@ output {
   color: #555555;
   background-color: #ffffff;
   background-image: none;
-  border: 1px solid #cccccc;
+  border: 2px solid #cccccc;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2589,6 +2589,11 @@ fieldset[disabled] .form-control {
 }
 textarea.form-control {
   height: auto;
+}
+.form-control:focus {
+  outline: none;
+  border: 2px solid #a8a0a0;
+  box-shadow: none;
 }
 input[type="search"] {
   -webkit-appearance: none;
@@ -2894,7 +2899,7 @@ select[multiple].input-lg {
   color: #a94442;
 }
 .has-feedback label ~ .form-control-feedback {
-  top: 26px;
+  top: 19px;
 }
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
@@ -4052,27 +4057,36 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a > img {
   max-width: none;
 }
+.nav-tabs {
+  overflow: hidden;
+  border-bottom: 1px solid #dddddd;
+}
 .nav-tabs > li {
   float: left;
   margin-bottom: -1px;
 }
 .nav-tabs > li > a {
-  margin-right: 2px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #353535;
+  padding: 10px 30px;
   line-height: 1.42857143;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #dddddd;
+  color: #fff;
+  background-color: #fc6e51;
+  border-radius: 5px;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-bottom-color: transparent;
-  cursor: default;
+  border-color: #eeeeee #eeeeee #dddddd;
+  color: #fff;
+  background-color: #fc6e51;
+  border-radius: 5px;
 }
 .nav-tabs.nav-justified {
   width: 100%;
@@ -4191,6 +4205,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .tab-content > .active {
   display: block;
+  color: #353535;
+  padding: 20px;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;

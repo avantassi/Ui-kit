@@ -121,7 +121,7 @@ output {
   color: @input-color;
   background-color: @input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid @input-border;
+  border: 2px solid @input-border;
   border-radius: @input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
   .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
@@ -152,6 +152,11 @@ output {
   // Reset height for `textarea`s
   textarea& {
     height: auto;
+  }
+  &:focus{
+    outline: none;
+    border: 2px solid #a8a0a0;
+    box-shadow: none;
   }
 }
 
@@ -433,7 +438,7 @@ input[type="checkbox"] {
 .has-feedback label {
 
   & ~ .form-control-feedback {
-     top: (@line-height-computed + 5); // Height of the `label` and its margin
+     top: 19px; // Height of the `label` and its margin
   }
   &.sr-only ~ .form-control-feedback {
      top: 0;
