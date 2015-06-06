@@ -2504,7 +2504,6 @@ legend {
 label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
   font-weight: bold;
 }
 input[type="search"] {
@@ -2635,14 +2634,17 @@ input[type="search"] {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #555555;
 }
 .radio label,
 .checkbox label {
   min-height: 21px;
   padding-left: 20px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-weight: normal;
   cursor: pointer;
+  height: 15px;
+  line-height: 26px;
 }
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
@@ -3031,7 +3033,7 @@ select[multiple].input-lg {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333333;
+  color: #606060;
   text-decoration: none;
 }
 .btn:active,
@@ -3055,25 +3057,25 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333333;
+  color: #606060;
   background-color: #ffffff;
   border-color: #cccccc;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #333333;
+  color: #606060;
   background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 .btn-default:hover {
-  color: #333333;
+  color: #606060;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333333;
+  color: #606060;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -3086,7 +3088,7 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: #333333;
+  color: #606060;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
@@ -3118,7 +3120,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-default .badge {
   color: #ffffff;
-  background-color: #333333;
+  background-color: #606060;
 }
 .btn-primary {
   color: #ffffff;
@@ -3552,12 +3554,12 @@ tbody.collapse.in {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: 25px;
   vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid \9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+  border-top: 9.6px dashed #ebebeb;
+  border-top: 9.6px solid #ebebeb \9;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
 }
 .dropup,
 .dropdown {
@@ -3670,7 +3672,7 @@ tbody.collapse.in {
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
-  border-bottom: 4px solid;
+  border-bottom: 6px solid;
   content: "";
 }
 .dropup .dropdown-menu,
@@ -3780,7 +3782,7 @@ tbody.collapse.in {
   box-shadow: none;
 }
 .btn .caret {
-  margin-left: 0;
+  margin-left: 25px;
 }
 .btn-lg .caret {
   border-width: 5px 5px 0;

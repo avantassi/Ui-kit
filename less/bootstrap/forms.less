@@ -32,7 +32,7 @@ legend {
 label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
   font-weight: bold;
 }
 
@@ -224,13 +224,16 @@ input[type="search"] {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #555555;
 
   label {
     min-height: @line-height-computed; // Ensure the input doesn't jump when there is no text
     padding-left: 20px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-weight: normal;
     cursor: pointer;
+    height: 15px;
+    line-height: 26px;
   }
 }
 .radio input[type="radio"],

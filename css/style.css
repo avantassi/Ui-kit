@@ -1241,7 +1241,7 @@ address {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333333;
+  color: #606060;
   text-decoration: none;
 }
 .btn:active,
@@ -1263,25 +1263,25 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333333;
+  color: #606060;
   background-color: #ffffff;
   border-color: #cccccc;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #333333;
+  color: #606060;
   background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 .btn-default:hover {
-  color: #333333;
+  color: #606060;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333333;
+  color: #606060;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -1294,7 +1294,7 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: #333333;
+  color: #606060;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
@@ -1326,7 +1326,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-default .badge {
   color: #ffffff;
-  background-color: #333333;
+  background-color: #606060;
 }
 .btn-primary {
   color: #ffffff;
@@ -1812,7 +1812,7 @@ input[type="button"].btn-block {
   box-shadow: none;
 }
 .btn .caret {
-  margin-left: 0;
+  margin-left: 25px;
 }
 .btn-lg .caret {
   border-width: 5px 5px 0;
@@ -2713,7 +2713,6 @@ legend {
 label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
   font-weight: bold;
 }
 input[type="search"] {
@@ -2838,14 +2837,17 @@ input[type="search"] {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #555555;
 }
 .radio label,
 .checkbox label {
   min-height: 21px;
   padding-left: 20px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-weight: normal;
   cursor: pointer;
+  height: 15px;
+  line-height: 26px;
 }
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
@@ -3416,6 +3418,146 @@ select[multiple].input-lg {
   padding: 9px;
   border-radius: 3px;
 }
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 25px;
+  vertical-align: middle;
+  border-top: 9.6px dashed #ebebeb;
+  border-top: 9.6px solid #ebebeb \9;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+.dropup,
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle:focus {
+  outline: 0;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9.5px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #337ab7;
+}
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #777777;
+}
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+.open > a {
+  outline: 0;
+}
+.dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+.dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #777777;
+  white-space: nowrap;
+}
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 6px solid;
+  content: "";
+}
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+@media (min-width: 768px) {
+  .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto;
+  }
+}
 .color {
   background-color: #b3d4f9;
   height: 35px;
@@ -3447,6 +3589,9 @@ body {
 section {
   overflow: hidden;
   margin-bottom: 70px;
+}
+.overflow {
+  overflow: hidden;
 }
 .btn-green,
 .btn-gray,
@@ -3684,14 +3829,134 @@ section {
 .select-form {
   background-color: #fff;
   padding: 20px;
-  margin-top: 70px;
+  margin-top: 30px;
   border-radius: 8px;
+  height: 230px;
+}
+.disabled {
+  color: #eaeaea;
 }
 .tabs {
   margin-top: 33px;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
+}
+.forms-pro__row:first-of-type {
+  margin-bottom: 30px;
+}
+.forms-pro__row:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.forms-pro__steps {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 0 0;
+  height: 90px;
+}
+.forms-pro__steps:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.forms-pro__steps .forms-pro__step1 {
+  position: relative;
+  float: left;
+  margin-left: 30px;
+}
+.forms-pro__steps .forms-pro__step1:before {
+  content: 'Шаг 1';
+  position: absolute;
+  top: 25px;
+  left: -15px;
+  font-size: 15px;
+  color: #555555;
+  white-space: nowrap;
+}
+.forms-pro__steps .forms-pro__step1 .forms-pro__step-circle {
+  width: 12px;
+  height: 12px;
+  background: #fc6e51;
+  border-radius: 50%;
+}
+.forms-pro__steps .forms-pro__step2 {
+  position: relative;
+  float: left;
+}
+.forms-pro__steps .forms-pro__step2:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.forms-pro__steps .forms-pro__step2:before {
+  content: 'Шаг 2';
+  position: absolute;
+  top: 25px;
+  right: -15px;
+  font-size: 15px;
+  color: #555555;
+  white-space: nowrap;
+}
+.forms-pro__steps .forms-pro__step2 .forms-pro__step-circle {
+  float: right;
+  width: 12px;
+  height: 12px;
+  background: #dfdfdf;
+  border-radius: 50%;
+}
+.forms-pro__steps .forms-pro__step2 .forms-pro__step-line {
+  float: left;
+  width: 217px;
+  height: 2px;
+  background: #dfdfdf;
+  margin: 5px 5px 0;
+}
+.forms-pro__steps .forms-pro__step3 {
+  position: relative;
+  float: left;
+  margin-right: 30px;
+}
+.forms-pro__steps .forms-pro__step3:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.forms-pro__steps .forms-pro__step3:before {
+  content: 'Шаг 3';
+  position: absolute;
+  top: 25px;
+  right: -15px;
+  font-size: 15px;
+  color: #555555;
+  white-space: nowrap;
+}
+.forms-pro__steps .forms-pro__step3 .forms-pro__step-circle {
+  float: right;
+  width: 12px;
+  height: 12px;
+  background: #dfdfdf;
+  border-radius: 50%;
+}
+.forms-pro__steps .forms-pro__step3 .forms-pro__step-line {
+  float: left;
+  width: 217px;
+  height: 2px;
+  background: #dfdfdf;
+  margin: 5px 5px 0;
+}
+.forms-pro__runner {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 30px 20px;
+  width: 100%;
+}
+.forms-pro__progress {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
 }
 .bootstrap-tagsinput {
   display: block;

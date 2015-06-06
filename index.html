@@ -6,7 +6,10 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.css">
 	<link href="css/jquery.bxslider.css" rel="stylesheet" />
-	<!-- <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/ion.rangeSlider.css">
+	<link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css">
+
 </head>
 <body>
 	<div class="container">
@@ -176,13 +179,14 @@
 								    <li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Таб 4</a></li>
 						  		</ul>
 
-						  	<!-- Tab panes -->
-						  	<div class="tab-content">
-							    <div role="tabpanel" class="tab-pane active" id="home"><p>Первая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
-							    <div role="tabpanel" class="tab-pane" id="profile"><p>Вторая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
-							    <div role="tabpanel" class="tab-pane" id="messages"><p>Третья производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
-							    <div role="tabpanel" class="tab-pane" id="settings"><p>Четвертая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
-						  	</div>
+							  	<!-- Tab panes -->
+							  	<div class="tab-content">
+								    <div role="tabpanel" class="tab-pane active" id="home"><p>Первая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
+								    <div role="tabpanel" class="tab-pane" id="profile"><p>Вторая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
+								    <div role="tabpanel" class="tab-pane" id="messages"><p>Третья производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
+								    <div role="tabpanel" class="tab-pane" id="settings"><p>Четвертая производная, общеизвестно, изменяет тригонометрический звукосниматель, что известно даже школьникам. Определитель системы линейных уравнений многопланово нейтрализует интеграл от функции, обращающейся в бесконечность вдоль линии, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков).</p></div>
+							  	</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -222,25 +226,107 @@
 						</form>
 					</div>
 					<div class="select-form">
-						<select class="form-control input-lg">
-							<option>Выпадающий список</option>
-							<option>Первый пункт списка</option>
-							<option>Пункт при наведении</option>
-							<option>Еще пункт</option>
+						<select name="" id="">
+							<option selected="selected">Выпадающий список</option>
+						</select>
+						<select>
+					  		<option selected="selected">Выпадающий список</option>
+					  		<option>Первый пункт списка</option>
+					  		<option>Пункт при наведении</option>
+					  		<option>Еще пункт</option>
 						</select>
 					</div>
 				</div>
-				<div class="col-xs-3"></div>
+				<div class="col-xs-3 simple-form">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="radio">
+								<label class="disabled">
+							        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option0" disabled>
+							          Неактивно
+							    </label>
+							  	<label>
+							        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+							          Активно
+							    </label>
+								<label for="optionsRadios2">
+								    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+								          Отмечено
+								</label>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="checkbox">
+						  		<label class="disabled">
+						          	<input type="checkbox" value="" disabled>Неактивно
+						        </label>
+						        <label>
+						          	<input type="checkbox" value="">Активно
+						        </label>
+						        <label>
+						          	<input type="checkbox" value="" checked>Отмечено
+						        </label>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="col-xs-1"></div>
+			</div>
+		</section>
+
+		<section class="forms-pro">
+			<h1 class="separator">Продвинутые формы</h1>
+			<div class="row margin-top overflow">
+				<div class="col-xs-6">
+					<div class="forms-pro__row">
+						<div class="forms-pro__steps">
+							<div class="forms-pro__step1">
+								<div class="forms-pro__step-circle" id="circle1"></div>
+							</div>
+							<div class="forms-pro__step2">
+								<div class="forms-pro__step-circle" id="circle2"></div>
+								<div class="forms-pro__step-line" id="line1"></div>
+							</div>
+							<div class="forms-pro__step3">
+								<div class="forms-pro__step-circle" id="circle3"></div>
+								<div class="forms-pro__step-line" id="line2"></div>
+							</div>
+						</div>
+					</div>		
+				</div>
+				<div class="col-xs-4">
+					<div class="forms-pro__runner">
+	  					<input type="text" id="amount" readonly>
+					</div>
+				</div>
+				<div class="col-xs-2"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="forms-pro__progress">
+						<input type="text" id="progress" readonly>
+					</div>
+				</div>
+				<div class="col-xs-4"></div>
+				<div class="col-xs-4"></div>
+			</div>
+		</section>
+
+		<section class="more">
+			<h1 class="separator">Дополнительно</h1>
+			<div class="row margin-top">
+				
 			</div>
 		</section>
 	</div>
 
-	
-
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap-tagsinput.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.formstyler.min.js"></script>
+
+	<script src="js/ion.rangeSlider.min.js"></script>
 
 	<!-- bxSlider Javascript file -->
 	<script src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
@@ -251,6 +337,7 @@
 		});
 	</script>
 
+	<!-- tabs -->
  	<script>
  		$('#myTab a').click(function (e) {
 			e.preventDefault()
@@ -258,6 +345,56 @@
 		});
  	</script>
 	
+	<!-- select -->
+	<script>
+		$(function() {
+			$('select').styler();
+		});
+	</script>
+
+	<!-- steps -->
+	<script>
+		$(function () {
+
+			$('#circle1').click(function() {
+				$(this).css({'background' : '#fc6e51'}).parent().parent().find(".forms-pro__step3, .forms-pro__step2").find(".forms-pro__step-line, .forms-pro__step-circle").css({ 'background' : '#dfdfdf'});
+			});
+
+			$('#circle2').click(function() {
+				$(this).css({'background' : '#fc6e51'}).parent().find(".forms-pro__step-line").css({'background' : '#fc6e51'}).parent().parent().find(".forms-pro__step3").find(".forms-pro__step-line, .forms-pro__step-circle").css({ 'background' : '#dfdfdf'});
+
+			});
+
+			$('#circle3').click(function() {
+				$(this).css({'background' : '#fc6e51'})
+				.parent().parent().find(".forms-pro__step-line, .forms-pro__step-circle").css({'background' : '#fc6e51'});
+			});
+
+		});
+	</script>
+
+	<!-- range -->
+	<script>
+		$(document).ready(function(){
+			$("#amount").ionRangeSlider({
+				type: "double",
+				min: 1000,
+				max: 2000,
+				from: 1200,
+				to: 1800,
+				hide_min_max: true,
+				hide_from_to: false,
+				grid: false,
+				postfix: " P"
+			});
+
+			$("#progress").ionRangeSlider({
+				postfix: " %",
+				hide_min_max: true
+			});
+
+		});
+	</script>
 
 </body>
 </html>
