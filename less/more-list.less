@@ -1,0 +1,145 @@
+.messages{
+	border-radius: 8px;
+	overflow: hidden;
+}
+.messages-list {
+	float: left;
+	list-style: none;
+	width: 100%;
+	padding: 0;
+
+	&__item__title {
+		font-size: 18px;
+		color: #374c78;
+		background: #fff;
+		border-radius: 4px 4px 0 0;
+		padding: 20px 0 20px 20px;
+	}
+
+	&__item {
+		height: 40px;
+		background: #fff;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 1px;
+
+		a {
+			position: relative;
+			line-height: 40px;
+			text-decoration: none;
+			padding-left: 30px;
+			color: #000;
+			font-size: 14px;
+		}
+
+	}
+
+	&__link__new:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 20px;
+		height: 15px;
+		background: url('../img/mail.png') no-repeat;
+	}
+	&__link__important:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 20px;
+		height: 15px;
+		background: url('../img/impor.png') no-repeat;
+	}
+	&__link__work:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 20px;
+		height: 15px;
+		background: url('../img/work.png') no-repeat;
+	}
+	&__link__spam:after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 20px;
+		height: 15px;
+		background: url('../img/spam.png') no-repeat;
+	}
+
+	&__item__work {
+		background: #fff;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 1px;
+
+		a {
+			position: relative;
+			line-height: 40px;
+			text-decoration: none;
+			padding-left: 30px;
+			color: #000;
+			font-size: 14px;
+			cursor: pointer;
+		}
+
+		.messages-list__list-work {
+			list-style: none;
+			display: none;
+			
+			.messages-list__link-work {
+				position: relative;
+				line-height: 40px;
+				text-decoration: none;
+				padding-left: 10px;
+				color: #000;
+				font-size: 14px;
+			}
+
+			.messages-list__span2 {
+				font-size: 13px;
+				float: right;
+				width: 33px;
+				line-height: 16px;
+				margin-top: 12px;
+				text-align: center;
+				color: #8e8e8e;
+			}
+		}
+	}
+
+	&__item__show {
+		font-size: 18px;
+		color: #374c78;
+		background: #fff;
+		border-radius: 0 0 4px 4px;
+		padding: 20px 0 20px 20px;
+		margin-top: 1px;
+
+		a {
+			font-size: 14px;
+			color: #db5286;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	.messages-list__span1 {
+		font-size: 11px;
+		float: right;
+		line-height: 16px;
+		background: #f29393;
+		border-radius: 7px;
+		color: #fff;
+		text-align: center;
+		margin-top: 12px;
+		display: inline;
+		padding: 0 10px;
+	}
+
+}

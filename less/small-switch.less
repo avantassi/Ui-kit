@@ -1,0 +1,51 @@
+.small-switch label {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #555555;
+  font-weight: normal;
+  
+  input {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    
+    & + span {
+      display: inline-block;
+      position: relative;
+      padding-left: 50px;
+      
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 40px;
+        height: 20px;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        background-color: #eaeaea;
+      }
+      
+      &:after {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        content: '';
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+    &:checked + span {
+      &:before{
+        background-color: #addf7a;
+      }
+      &:after {
+        left: 22px;
+      }
+    }
+  }
+}

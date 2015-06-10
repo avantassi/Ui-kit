@@ -1,0 +1,120 @@
+.forms-pro__row:first-of-type {
+	margin-bottom: 30px;
+}
+
+.forms-pro__row:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.forms-pro__steps {
+	background: #fff;
+	border-radius: 8px;
+	padding: 30px 0 0;
+	height: 90px;
+
+	&:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+
+	.forms-pro__step1 {
+		position: relative;
+		float: left;
+		margin-left: 30px;
+
+		&:before {
+			content: 'Шаг 1';
+			position: absolute;
+			top: 25px;
+			left: -15px;
+			font-size: @font-size-base;
+			color: @gray;
+			white-space: nowrap;
+		}
+
+		.forms-pro__step-circle {
+			width: 12px;
+			height: 12px;
+			background: #fc6e51;
+			border-radius: 50%;
+		}
+	}
+
+	.forms-pro__step2 {
+		position: relative;
+		float: left;
+
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+
+		&:before {
+			content: 'Шаг 2';
+			position: absolute;
+			top: 25px;
+			right: -15px;
+			font-size: @font-size-base;
+			color: @gray;
+			white-space: nowrap;
+		}
+
+		.forms-pro__step-circle {
+			float: right;
+			width: 12px;
+			height: 12px;
+			background: #dfdfdf;
+			border-radius: 50%;
+		}
+
+		.forms-pro__step-line	{
+			float: left;
+			width: 217px;
+			height: 2px;
+			background: #dfdfdf;
+			margin: 5px 5px 0;
+		}	
+	}
+
+	.forms-pro__step3 {
+		position: relative;
+		float: left;
+		margin-right: 30px;
+
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+
+		&:before {
+			content: 'Шаг 3';
+			position: absolute;
+			top: 25px;
+			right: -15px;
+			font-size: @font-size-base;
+			color: @gray;
+			white-space: nowrap;
+		}
+
+		.forms-pro__step-circle {
+			float: right;
+			width: 12px;
+			height: 12px;
+			background: #dfdfdf;
+			border-radius: 50%;
+		}
+
+		.forms-pro__step-line	{
+			float: left;
+			width: 217px;
+			height: 2px;
+			background: #dfdfdf;
+			margin: 5px 5px 0;
+		}	
+	}
+}

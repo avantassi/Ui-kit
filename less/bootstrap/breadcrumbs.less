@@ -7,20 +7,35 @@
   padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
   margin-bottom: @line-height-computed;
   list-style: none;
-  background-color: @breadcrumb-bg;
-  border-radius: @border-radius-base;
+  background-color: #fff;
+  padding: 20px 20px 20px 30px;
+  border-radius: 8px;
+  a{
+    color: #353535;
+  }
 
   > li {
     display: inline-block;
 
     + li:before {
       content: "@{breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
-      padding: 0 5px;
-      color: @breadcrumb-color;
+      // padding: 0 2px;
+      color: #353535;;
     }
   }
 
   > .active {
-    color: @breadcrumb-active-color;
+    color: #353535;
   }
 }
+
+.bread-img:before{
+      content: "";
+      background: url(../img/bread-img.png) no-repeat;
+      height: 15px;
+      width: 17px;
+      position: relative;
+      display: inline-block;
+      right: 10px;
+      top: 1px;
+    }

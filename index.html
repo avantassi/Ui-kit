@@ -241,11 +241,11 @@
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="radio">
-								<label class="disabled">
+								<label for="optionsRadios0" class="disabled">
 							        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option0" disabled>
 							          Неактивно
 							    </label>
-							  	<label>
+							  	<label for="optionsRadios1">
 							        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
 							          Активно
 							    </label>
@@ -253,6 +253,22 @@
 								    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
 								          Отмечено
 								</label>
+							</div>
+							<div class="small-switch">
+								<form action="">
+							  		<label class="disabled">
+							    		<input type="checkbox" disabled>
+							    		<span class="disabled">Неактивно</span>
+							  		</label>
+							  		<label>
+							    		<input type="checkbox" >
+							    		<span>Выключено</span>
+							  		</label>
+							  		<label>
+							    		<input type="checkbox" >
+							    		<span>Включено</span>
+							  		</label>
+								</form>  
 							</div>
 						</div>
 						<div class="col-xs-6">
@@ -307,7 +323,20 @@
 						<input type="text" id="progress" readonly>
 					</div>
 				</div>
-				<div class="col-xs-4"></div>
+				<div class="col-xs-4">
+					<div class="forms-pro__toggle">
+					<div class="forms-pro__toggle-field">
+						<span class="forms-pro__unselected1">Не выбрано</span>
+						<span class="forms-pro__unselected2">Не выбрано</span>
+						<div class="forms-pro__toggle-field__field-red1" id="field-red1">
+							<span class="forms-pro__selected">Выбрано</span>
+						</div>
+						<div class="forms-pro__toggle-field__field-red2" id="field-red2">
+							<span class="forms-pro__selected">Выбрано</span>
+						</div>
+					</div>
+				</div>
+				</div>
 				<div class="col-xs-4"></div>
 			</div>
 		</section>
@@ -315,7 +344,42 @@
 		<section class="more">
 			<h1 class="separator">Дополнительно</h1>
 			<div class="row margin-top">
-				
+				<div class="col-xs-3">
+					<div class="messages">
+					<ul class="messages-list">
+						<li class="messages-list__item__title">Входящие сообщения</li>
+						<li class="messages-list__item"><a href="#" class="messages-list__link__new">Новые</a><span class="messages-list__span1">32</span></li>
+						<li class="messages-list__item"><a href="#" class="messages-list__link__important">Важные</a><span class="messages-list__span1">6</span></li>
+						<li class="messages-list__item__work"><a name="menu" class="messages-list__link__work">Работа</a><span class="messages-list__span1">4</span>
+							<ul class="messages-list__list-work">
+								<li><a href="#menu" class="messages-list__link-work">Забота</a><span class="messages-list__span2">1</span></li>
+								<li><a href="#" class="messages-list__link-work">Зевота</a><span class="messages-list__span2">2</span></li>
+							</ul>
+						</li>
+						<li class="messages-list__item"><a href="#" class="messages-list__link__spam">Спам</a></li>
+						<li class="messages-list__item__show"><a href="#" class="messages-list__link__show">Показать всё</a></li>
+					</ul>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<ol class="breadcrumb">
+				  		<li class="bread-img"><a href="#">Чем дальше в лес</a></li>
+				  		<li><a href="#">Тем больше</a></li>
+				  		<li class="active">Дров</li>
+					</ol>
+
+					<div class="value">
+						<a href="#" class="value__value-link">Оцените:</a>
+						<ul class="value-list">
+							<li class="value-item"><img src="img/star.png" height="15" width="15" alt="" id="color-change"></li>
+							<li class="value-item1"><img src="img/star.png" height="15" width="15" alt="" id="color-change1"></li>
+							<li class="value-item2"><img src="img/star.png" height="15" width="15" alt="" id="color-change2"></li>
+							<li class="value-item3"><img src="img/star.png" height="15" width="15" alt="" id="color-change3"></li>
+							<li class="value-item4"><img src="img/star.png" height="15" width="15" alt="" id="color-change4"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-5"></div>
 			</div>
 		</section>
 	</div>
@@ -370,6 +434,28 @@
 				.parent().parent().find(".forms-pro__step-line, .forms-pro__step-circle").css({'background' : '#fc6e51'});
 			});
 
+			// value
+
+			$('#color-change').click(function() {
+				$(this).attr({'src' : 'img/star-active.png'}).parent().parent().find('.value-item1, .value-item2, .value-item3, .value-item4').find('img').attr({'src' : 'img/star.png'})
+			});
+
+			$('#color-change1').click(function() {
+				$(this).attr({'src' : 'img/star-active.png'}).parent().parent().find('.value-item, .value-item1').find('img').attr({'src' : 'img/star-active.png'}).parent().parent().find('.value-item2, .value-item3, .value-item4').find('img').attr({'src' : 'img/star.png'})
+			});
+
+			$('#color-change2').click(function() {
+				$(this).attr({'src' : 'img/star-active.png'}).parent().parent().find('.value-item, .value-item1, .value-item2').find('img').attr({'src' : 'img/star-active.png'}).parent().parent().find('.value-item3, .value-item4').find('img').attr({'src' : 'img/star.png'})
+			});
+
+			$('#color-change3').click(function() {
+				$(this).attr({'src' : 'img/star-active.png'}).parent().parent().find('.value-item, .value-item1, .value-item2, .value-item3').find('img').attr({'src' : 'img/star-active.png'}).parent().parent().find('.value-item4').find('img').attr({'src' : 'img/star.png'})
+			});
+
+			$('#color-change4').click(function() {
+				$(this).attr({'src' : 'img/star-active.png'}).parent().parent().find('li').find('img').attr({'src' : 'img/star-active.png'})
+			});
+
 		});
 	</script>
 
@@ -379,9 +465,9 @@
 			$("#amount").ionRangeSlider({
 				type: "double",
 				min: 1000,
-				max: 2000,
+				max: 12000,
 				from: 1200,
-				to: 1800,
+				to: 9500,
 				hide_min_max: true,
 				hide_from_to: false,
 				grid: false,
@@ -390,10 +476,26 @@
 
 			$("#progress").ionRangeSlider({
 				postfix: " %",
+				from: 40,
 				hide_min_max: true
 			});
 
 		});
+
+		// switch
+		$('.forms-pro__unselected2').click(function() {
+	      	$('#field-red1').css({'display' : 'none'});
+	      	$('#field-red2').css({'display' : 'block'});
+      	});
+      	$('.forms-pro__unselected1').click(function() {
+	      	$('#field-red2').css({'display' : 'none'});
+	      	$('#field-red1').css({'display' : 'block'});
+      	});
+
+      	$('.messages-list__item__work').click(function() {
+      		$('.messages-list__list-work').slideToggle();
+      	});
+
 	</script>
 
 </body>
